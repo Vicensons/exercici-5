@@ -1,0 +1,35 @@
+name: compile-test-linux
+on:
+  push:
+    branches: [ main ]
+  compile-test-lin:
+    runs-on: linux-latest
+    steps:
+      - name: Descarregar el codi
+        uses: actions/checkout@v6
+
+      - name: Compilar
+        run: make
+
+      - name: Provar
+        run: ./conversor.exe c2f 100
+name: compile-test-mac
+on:
+  push:
+    branches: [ main ]
+  compile-test-lin:
+    runs-on: linux-latest
+    steps:
+      - name: Descarregar el codi
+        uses: actions/checkout@v6
+
+      - name: Compilar
+        run: make
+
+      - name: Provar
+        run: ./conversor.exe c2f 100
+
+
+
+
+
